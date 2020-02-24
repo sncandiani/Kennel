@@ -1,17 +1,13 @@
 import React from "react";
-const EmployeeCard = () => {
+const EmployeeCard = (props) => {
     return (
       <div className="card">
         <div className="card-content">
-        <img src={require("./winnie.png")} alt="Winnie the Pooh"/>
-        <h1>
+          <h1>
            Employees:
           </h1>
           <ul>
-              <li>Lisa Sachs</li>
-              <li>Matthew Reeds</li>
-              <li>Cooper Cotton</li>
-              <li>Margaret Robbins</li>
+        <li>{props.employee.name}</li>
           </ul>
         </div>
       </div>
