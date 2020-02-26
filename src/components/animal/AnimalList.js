@@ -11,19 +11,28 @@ const AnimalList = () => {
     // After the data comes back from the API, we
     //  use the setAnimals function to update state
     return AnimalManager.getAll().then(animalsFromAPI => {
+        //after getting the animals we will be setting the animals which is the
+        //function which changes the state 
       setAnimals(animalsFromAPI)
     });
   };
-
-  // got the animals from the API on the component's first render
+  const deleteAnimalFunction = id => {
+    AnimalManager.delete(id)
+      .then(() => AnimalManager.getAll().then(setAnimals));
+  };
+  // got the animals from the API on the component's first render, actually happens after the return
   useEffect(() => {
     getAnimals();
   }, []);
 
   // Finally we use map() to "loop over" the animals array to show a list of animal cards
+  //this is returning JSX based on the current array, array must be populated for it to actually return something to the DOM
+  //maps over the properties of animals 
+  //deleteAnimal is a prop that is equal to the deleteAnimalFunction
+
   return (
     <div className="container-cards">
-    {animals.map(animal => <AnimalCard key={animal.id} animal={animal} /> )}
+    {animals.map(animal => <AnimalCard key={animal.id} animal={animal} deleteAnimal={deleteAnimalFunction} /> )}
   </div>
   );
 };

@@ -1,18 +1,66 @@
 {
-    "animals": [
-        { "id": 1, "name": "Doodles", "breed": "Poodle"},
-        { "id": 2, "name": "Decker", "breed": "German Shepherd" },
-        { "id": 3, "name": "Esme", "breed": "Pitbull" }
-    ], 
-    "locations": [
-        {"id":1, "name": "Nashville North"}, 
-        {"id":2, "name": "Nashville South"}
-    ], 
-    "employees": [
-        {"id": 1, "name": "Landon Morgan"}, 
-        {"id": 2, "name": "Matthew Baker"}
-    ], 
-    "owners": [
-        {"id": 1, "phoneNumber": "602999454", "name": "Sofia Candiani"}
-    ]
+  "animals": [
+    {
+      "id": 1,
+      "name": "Luna",
+      "breed": "Poodle"
+    },
+    {
+      "id": 2,
+      "name": "Decker",
+      "breed": "German Shepherd"
+    },
+    {
+      "id": 3,
+      "name": "Esme",
+      "breed": "Pitbull"
+    },
+    {
+      "id": 4,
+      "name": "Molly",
+      "breed": "Border Collie"
+    }
+  ],
+  "locations": [
+    {
+      "id": 1,
+      "name": "Nashville North"
+    },
+    {
+      "id": 2, 
+      "name": "Nashville South"
+    },
+    {
+      "id": 3,
+      "name": "Nashville East"
+    },
+    {
+      "id": 4,
+      "name": "Nashville West"
+    }
+  ],
+  "employees": [
+    {
+      "id": 1,
+      "name": "Landon Morgan"
+    },
+    {
+      "id": 2,
+      "name": "Jackson Parsons"
+    }
+  ],
+  "owners": [
+    {
+      "id": 1,
+      "name": "Sofia Candiani"
+    },
+    {
+      "id": 2,
+      "name": "Sophia Law"
+    },
+    {
+      "id": 3,
+      "name": "Kristen Norris"
+    }
+  ]
 }

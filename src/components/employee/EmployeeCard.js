@@ -10,8 +10,10 @@ const EmployeeCard = (props) => {
         <li>{props.employee.name}</li>
           </ul>
         </div>
+        <button type="button" onClick={() => props.fireEmployee(props.employee.id)}>Fire</button>
       </div>
     );
   };
 
   export default EmployeeCard;
+

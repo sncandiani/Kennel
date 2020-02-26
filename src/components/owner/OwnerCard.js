@@ -8,6 +8,7 @@ const OwnerCard = (props) => {
               <li>{props.owner.name}</li>
           </ul>
         </div>
+        <button type="button" onClick={() => props.deleteOwner(props.owner.id)}>Remove Owner</button>
       </div>
     );
   };

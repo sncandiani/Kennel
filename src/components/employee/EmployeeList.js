@@ -14,13 +14,16 @@ const EmployeeList = () => {
             setEmployees(employeesFromAPI)
         })
     }
+    const fireEmployeeFunction = (id) => {
+        EmployeeManager.delete(id).then(() => EmployeeManager.getAll().then(setEmployees));
+    }
         useEffect(() => {
             getEmployees();
         }, []);
         //returning the value of mapped employees within container cards
         return (
             <div className="container-cards">
-                {employees.map(employee => <EmployeeCard key={employee.id} employee={employee} />)}
+                {employees.map(employee => <EmployeeCard key={employee.id} employee={employee} fireEmployee={fireEmployeeFunction}/>)}
             </div>
         );
 };
