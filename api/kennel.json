@@ -19,6 +19,11 @@
       "id": 4,
       "name": "Molly",
       "breed": "Border Collie"
+    },
+    {
+      "name": "Lucy",
+      "breed": "Chihuaha",
+      "id": 5
     }
   ],
   "locations": [
@@ -27,7 +32,7 @@
       "name": "Nashville North"
     },
     {
-      "id": 2, 
+      "id": 2,
       "name": "Nashville South"
     },
     {

@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import AnimalCard from './AnimalCard';
 import AnimalManager from '../../modules/AnimalManager';
 
-const AnimalList = () => {
+const AnimalList = (props) => {
   // The initial state is an empty array
   const [animals, setAnimals] = useState([]);
 
@@ -29,11 +29,20 @@ const AnimalList = () => {
   //this is returning JSX based on the current array, array must be populated for it to actually return something to the DOM
   //maps over the properties of animals 
   //deleteAnimal is a prop that is equal to the deleteAnimalFunction
-
+//<> </> is open and close react fragment
   return (
+    <>
+    <section className="section-content">
+      <button type="button"
+          className="btn"
+          onClick={() => {props.history.push("/animals/new")}}>
+          Admit Animal
+      </button>
+    </section>
     <div className="container-cards">
     {animals.map(animal => <AnimalCard key={animal.id} animal={animal} deleteAnimal={deleteAnimalFunction} /> )}
   </div>
+  </>
   );
 };
 export default AnimalList

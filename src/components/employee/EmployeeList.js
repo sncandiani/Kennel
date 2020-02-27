@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import EmployeeCard from './EmployeeCard'
 import EmployeeManager from '../../modules/EmployeeManager'
+
 //employeeList is a ____? an object?
-const EmployeeList = () => {
+const EmployeeList = (props) => {
     const [employees, setEmployees] = useState([]); //locations is an empty array, and set locations is a function
     //useState ?? refer back to notes 
 
@@ -22,9 +23,18 @@ const EmployeeList = () => {
         }, []);
         //returning the value of mapped employees within container cards
         return (
+            <>
+            <section className="section-content">
+                <button type="button"
+                    className="btn"
+                    onClick={() => {props.history.push("/employees/new")}}>
+                    Add Employee
+                </button>
+            </section>
             <div className="container-cards">
                 {employees.map(employee => <EmployeeCard key={employee.id} employee={employee} fireEmployee={fireEmployeeFunction}/>)}
             </div>
+            </>
         );
 };
 export default EmployeeList
